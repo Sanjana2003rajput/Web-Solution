@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Join Our Team | Careers at [Company Name]</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fbfc;
+    color:  black;;
+    line-height: 1.6;
+  }
+  a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #CE9233;
+  }
+
+  header {
+    background-color:#CE9233;;
+    color: #ecf0f1;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  }
+  header h1 {
+    margin: 0 0 0.3rem 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  header p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+  }
+
+  main.container {
+    max-width: 1100px;
+    width: 95%;
+    margin: 2rem auto 5rem auto;
+  }
+  section {
+    background:white;
+    margin-bottom: 3rem;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgb(0 0 0 / 0.05);
+  }
+  section h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid black
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    color: #16a085;
+  }
+  section p, section ul {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #34495e;
+  }
+
+  /* Company Info */
+  .company-info p {
+    max-width: 720px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Job Listings */
+  .job-listings .job {
+    padding: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .job-listings .job:last-child {
+    border-bottom: none;
+  }
+  .job-listings .job:hover {
+    box-shadow: 0 10px 25px rgb(0 0 0 / 0.12);
+    background-color:#CE9233;;
+  }
+  .job-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    padding-right: 130px;
+  }
+  .job-location, .job-requirements {
+    font-weight: 400;
+    margin: 0.3rem 0 0.8rem 0;
+  }
+  .apply-btn {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: #CE9233;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .apply-btn:hover,
+  .apply-btn:focus {
+    background-color: #ffc107;
+    outline: none;
+  }
+  /* coursebtm*/
+  .course-btn{
+
+  }
+  
+
+  /* Testimonials */
+  .testimonials {
+    max-width: 720px;
+  }
+  .testimonial {
+    margin-bottom: 1.8rem;
+    border-left: 5px solid black
+    background-color: #f3fcfb;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-style: italic;
+    color: #2c3e50;
+  }
+  .testimonial cite {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: right;
+    font-weight: 600;
+    color: black
+  }
+
+  /* Recruitment Process Steps */
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 900px;
+    gap: 20px;
+  }
+  .step {
+    background: #ecf0f1;
+    flex: 1 1 220px;
+    padding: 1.5rem 1.8rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgb(0 0 0 / 0.07);
+    cursor: default;
+    transition: background-color 0.3s ease;
+  }
+  .step:hover {
+    background-color:#CE9233; 
+  }
+  .step h3 {
+    margin: 0 0 0.7rem 0;
+    color: black;
+  }
+  .step p {
+    font-weight: 300;
+    font-size: 0.95rem;
+    color: #34495e;
+  }
+  .step-icon {
+    font-size: 2.5rem;
+    color:#CE9233;
+    margin-bottom: 1rem;
+  }
+
+  /* Contact Info */
+  .contact-info h2{
+    color: black;
+  }
+  .contact-info p {
+    margin: 0.5rem 0;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .contact-info a {
+    color: #2980b9;
+    font-weight: 600;
+  }
+  .contact-info a:hover {
+    color:  #CE9233;
+  }
+
+  /* Modal Styles */
+  .modal-overlay {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  .modal-overlay.show {
+    display: flex;
+  }
+  .modal {
+    background: white;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    position: relative;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3rem;
+  }
+  .modal-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #34495e;
+  }
+  .close-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #34495e;
+    font-weight: 600;
+    line-height: 1;
+  }
+  form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: #34495e;
+  }
+  form input, form textarea, form select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+  }
+  form input:focus, form textarea:focus, form select:focus {
+    outline: none;
+    border-color:black
+  }
+  form textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+  form button.submit-btn {
+    background-color:  #CE9233;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  form button.submit-btn:hover, form button.submit-btn:focus {
+    background-color: #CE9233;
+    outline: none;
+  }
+  .form-error {
+    margin-bottom: 1rem;
+    color: #e74c3c;
+    font-weight: 600;
+  }
+  /* Responsive */
+  @media (max-width: 720px) {
+    .steps {
+      flex-direction: column;
+    }
+    .step {
+      text-align: left;
+    }
+    .apply-btn {
+      position: static;
+      transform: none;
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .job-title {
+      padding-right: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Careers at [Websphere Solution]</h1>
+  <p>Join a team committed to innovation, growth & success.</p>
+</header>
+
+<main class="container" role="main">
+
+  <!-- Company Information -->
+  <section class="company-info" aria-labelledby="companyInfoTitle">
+    <h2 id="companyInfoTitle"  style="color: black;">About Us</h2>
+    <p>At <strong>[Websphere Solutions]</strong>, we believe our people are our greatest asset. We cultivate a culture of collaboration, innovation, and continuous learning, empowering our team members to reach their fullest potential.</p>
+    <p>Our mission is to drive excellence while fostering diversity, inclusion, and a positive workplace environment. Explore opportunities with us and build a meaningful career.</p>
+
+  </section>
+
+  <!-- Recruitment Process -->
+  <section aria-labelledby="processTitle">
+    <h2 id="processTitle" style="color: black;">Our Recruitment Process</h2>
+    <div class="steps" role="list">
+      <div class="step" role="listitem" tabindex="0">
+        <div class="step-icon"><i class="fas fa-search"></i></div>
+        <h3>Discover & Apply</h3>
+        <p>Browse our current openings and submit your application through our easy online system.</p>
+      </div>
+      <div class="step" role="listitem" tabindex="0">
+        <div class="step-icon"><i class="fas fa-comments"></i></div>
+        <h3>Interview</h3>
+        <p>Engage with our recruiters and managers to discuss your experience and goals.</p>
+      </div>
+      <div class="step" role="listitem" tabindex="0">
+        <div class="step-icon"><i class="fas fa-user-check"></i></div>
+        <h3>Offer & Onboarding</h3>
+        <p>Receive your offer and begin your journey with a comprehensive onboarding experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+  <section class="job-listings" aria-labelledby="jobListingsTitle">
+    <h2 id="jobListingsTitle" style="color: black;" >Current Openings</h2>
+    
+    <article class="job" tabindex="0" aria-labelledby="job1Title">
+      <h3 id="job1Title" class="job-title">Software Engineer</h3>
+      <p class="job-location"><strong>Location:</strong> Remote</p>
+      <p class="job-requirements"><strong>Requirements:</strong> 3+ years experience, proficiency in JavaScript and Python, strong problem-solving skills.</p>
+      <button class="apply-btn" aria-label="Apply for Software Engineer" data-job="Software Engineer">Apply Now</button>
+    </article>
+
+    <article class="job" tabindex="0" aria-labelledby="job2Title">
+      <h3 id="job2Title" class="job-title">Digital Marketing Specialist</h3>
+      <p class="job-location"><strong>Location:</strong> New York, NY</p>
+      <p class="job-requirements"><strong>Requirements:</strong> SEO, PPC expertise, social media campaign management experience.</p>
+      <button class="apply-btn" aria-label="Apply for Digital Marketing Specialist" data-job="Digital Marketing Specialist">Apply Now</button>
+    </article>
+
+    <article class="job" tabindex="0" aria-labelledby="job3Title">
+      <h3 id="job3Title" class="job-title">Explore Our Courses</h3>
+      <p class="job-location"><strong>AT</strong><strong>[Websphere Solutions]</strong></p>
+      <p class="job-requirements"> we empower learners with industry-relevant IT skills through expertly designed courses. 
+        Whether you're <p></p>a beginner exploring the tech world or a professional looking to upskill, we have the right course for you.</p>
+     <a href="Course.html"><button class="apply-btn" aria-label="Courses" data-job="Access Courses">Courses</button></a>
+    </article>
+  </section>
+
+  <!-- Why choose courses-->
+    <section class="company-info" aria-labelledby="companyInfoTitle">
+    <h2 id="companyInfoTitle"  style="color: black;">Why Choose Our Courses?
+    <p>Expert Instructors: Learn from certified professionals with real-world experience.</p>
+    <p>Hands-on Learning: Practical projects and assignments to build your portfolio.</p>
+    <p>Flexible Learning: Online, self-paced, and live class options.</p>
+    <p>Career Support: Resume building, interview prep, and job placement assistance.
+
+</p>
+  </section>
+  <!-- Testimonials -->
+  
+    <h1 id="testimonialsTitle">Employee Testimonials</h1>
+    <blockquote class="testimonial">
+      "Working here has transformed my career. The supportive culture and growth opportunities are amazing!" 
+      <cite>- Alex Johnson, Senior Developer</cite>
+    </blockquote>
+    <blockquote class="testimonial">
+      "I love the emphasis on work-life balance and continuous learning at [Company Name]. It’s a place where you really feel valued."
+      <cite>- Maria Lopez, Marketing Manager</cite>
+    </blockquote>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="contact-info" style="color: black;" aria-labelledby="contactTitle">
+    <h2 id="contactTitle">Have Questions?</h2>
+    <p>Contact our HR team for more information about job openings or the recruitment process.</p>
+    <p>Email: <a href="mailto:hr@company.com">info@webspheresolution.in</a></p>
+    <p>Phone: <a href="contact">+91-7011032036</a></p>
+  </section>
+
+</main>
+
+<!-- Modal for Application Form -->
+<div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="applicationModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2 id="modalTitle">Apply for <span id="modalJobName"></span></h2>
+      <button class="close-btn" aria-label="Close application form">&times;</button>
+    </div>
+    
+    <form id="applicationForm" novalidate>
+      <div id="formError" class="form-error" aria-live="assertive" style="display:none;"></div>
+
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="john@example.com" required />
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1 555 132 4567" required pattern="^\+?[0-9\s\-]{7,15}$" />
+
+      <label for="coverLetter">Cover Letter</label>
+      <textarea id="coverLetter" name="coverLetter" placeholder="Briefly explain why you're the perfect fit for this role..."></textarea>
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Modal handlers
+  const modal = document.getElementById('applicationModal');
+  const modalJobName = document.getElementById('modalJobName');
+  const closeBtn = modal.querySelector('.close-btn');
+  const applyButtons = document.querySelectorAll('.apply-btn');
+  const form = document.getElementById('applicationForm');
+  const formError = document.getElementById('formError');
+
+  applyButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      modalJobName.textContent = btn.getAttribute('data-job');
+      form.reset();
+      formError.style.display = 'none';
+      modal.classList.add('show');
+      document.getElementById('name').focus();
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('show');
+  });
+
+  window.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+    }
+  });
+
+  // Form validation and submission simulation
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    formError.style.display = 'none';
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+
+    // Basic validation
+    if (!name) {
+      showError('Please enter your full name.');
+      return;
+    }
+    if (!validateEmail(email)) {
+      showError('Please enter a valid email address.');
+      return;
+    }
+    if (!validatePhone(phone)) {
+      showError('Please enter a valid phone number.');
+      return;
+    }
+
+    // Simulate submission - Replace with real submission logic
+    alert('Thank you for applying! We have received your application and will be in touch soon.');
+    modal.classList.remove('show');
+  });
+
+  function showError(message) {
+    formError.textContent = message;
+    formError.style.display = 'block';
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function validatePhone(phone) {
+    return /^\+?[0-9\s\-]{7,15}$/.test(phone);
+  }
+</script>
+
+</body>
+</html>
+

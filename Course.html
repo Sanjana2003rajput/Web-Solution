@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IT Courses Catalog</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(white);
+    color: #f0f0f0;
+  }
+  header {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 0 0 8px #CE9233;
+  }
+  header p {
+    margin-top: 0.5rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color:black;
+  }
+  main {
+    max-width: 1100px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .course-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem 1.2rem;
+    box-shadow: 0 4px 15px rgba(206, 146, 51, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(206, 146, 51, 0.8);
+  }
+  .course-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color:black;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.8px;
+  }
+  .course-desc {
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  .apply-btn {
+    align-self: center;
+    background: #CE9233;
+    color: #3b2600;
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 1.8rem;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(206, 146, 51, 0.5);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  .apply-btn:hover {
+    background: #b07d21;
+    color: #fff4cc;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(176, 125, 33, 0.7);
+  }
+  footer {
+    text-align: center;
+    color: black;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 0 0 4px black
+  }
+  @media (max-width: 500px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    .course-card {
+      padding: 1.1rem;
+    }
+    .course-title {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>IT Courses Catalog</h1>
+    <p>Explore our extensive list of 18+ top IT courses</p>
+  </header>
+  <main>
+    <div class="course-grid">
+      <div class="course-card">
+        <div class="course-title">Full Stack Web Development</div>
+        <div class="course-desc">Learn frontend and backend technologies to build dynamic web applications.</div>
+        <button class="apply-btn" onclick="alert('You applied for Full Stack Web Development!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Cloud Computing Fundamentals</div>
+        <div class="course-desc">Explore cloud platforms like AWS, Azure, and Google Cloud for scalable infrastructure.</div>
+        <button class="apply-btn" onclick="alert('You applied for Cloud Computing Fundamentals!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Cybersecurity Essentials</div>
+        <div class="course-desc">Protect systems and networks by understanding cyber threats and defense strategies.</div>
+        <button class="apply-btn" onclick="alert('You applied for Cybersecurity Essentials!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Data Science and Analytics</div>
+        <div class="course-desc">Extract insights from data using tools like Python, R, and machine learning.</div>
+        <button class="apply-btn" onclick="alert('You applied for Data Science and Analytics!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Artificial Intelligence Basics</div>
+        <div class="course-desc">Delve into AI concepts, including neural networks and natural language processing.</div>
+        <button class="apply-btn" onclick="alert('You applied for Artificial Intelligence Basics!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">DevOps and Automation</div>
+        <div class="course-desc">Learn automation, continuous integration, and delivery pipelines for development efficiency.</div>
+        <button class="apply-btn" onclick="alert('You applied for DevOps and Automation!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Mobile App Development</div>
+        <div class="course-desc">Build native and cross-platform apps for iOS and Android devices.</div>
+        <button class="apply-btn" onclick="alert('You applied for Mobile App Development!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Blockchain Fundamentals</div>
+        <div class="course-desc">Understand blockchain technology and develop decentralized applications.</div>
+        <button class="apply-btn" onclick="alert('You applied for Blockchain Fundamentals!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Machine Learning Advanced</div>
+        <div class="course-desc">Master advanced ML algorithms, deep learning, and model deployment strategies.</div>
+        <button class="apply-btn" onclick="alert('You applied for Machine Learning Advanced!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Network Administration</div>
+        <div class="course-desc">Manage and configure enterprise-level network infrastructure and security.</div>
+        <button class="apply-btn" onclick="alert('You applied for Network Administration!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Database Management</div>
+        <div class="course-desc">Learn SQL, NoSQL, and data storage optimization techniques for diverse applications.</div>
+        <button class="apply-btn" onclick="alert('You applied for Database Management!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">UI/UX Design Principles</div>
+        <div class="course-desc">Create engaging user interfaces and design experiences that delight users.</div>
+        <button class="apply-btn" onclick="alert('You applied for UI/UX Design Principles!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Python Programming</div>
+        <div class="course-desc">Learn Python fundamentals and scripting for automation, web, and data projects.</div>
+        <button class="apply-btn" onclick="alert('You applied for Python Programming!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Java Programming</div>
+        <div class="course-desc">Develop robust applications in Java with focus on OOP concepts and frameworks.</div>
+        <button class="apply-btn" onclick="alert('You applied for Java Programming!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Linux System Administration</div>
+        <div class="course-desc">Master command line, shell scripting, and system management in Linux environments.</div>
+        <button class="apply-btn" onclick="alert('You applied for Linux System Administration!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Ethical Hacking</div>
+        <div class="course-desc">Learn penetration testing techniques to identify and fix security vulnerabilities.</div>
+        <button class="apply-btn" onclick="alert('You applied for Ethical Hacking!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Big Data Technologies</div>
+        <div class="course-desc">Handle large-scale data processing with Hadoop, Spark, and related tools.</div>
+        <button class="apply-btn" onclick="alert('You applied for Big Data Technologies!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Internet of Things (IoT)</div>
+        <div class="course-desc">Build connected devices and IoT systems with sensors, microcontrollers, and cloud services.</div>
+        <button class="apply-btn" onclick="alert('You applied for Internet of Things (IoT)!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Software Testing & QA</div>
+        <div class="course-desc">Ensure software quality through manual and automated testing techniques.</div>
+        <button class="apply-btn" onclick="alert('You applied for Software Testing & QA!')">Apply</button>
+      </div>
+      <div class="course-card">
+        <div class="course-title">Cloud Security</div>
+        <div class="course-desc">Understand securing cloud infrastructure and managing risks in cloud environments.</div>
+        <button class="apply-btn" onclick="alert('You applied for Cloud Security!')">Apply</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; Thanks For Visiting
+  </footer>
+</body>
+</html>
+
