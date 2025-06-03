@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Careers at Websphere Solution</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   /* Reset & base */
   *, *::before, *::after {
@@ -11,125 +12,192 @@
   }
   body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background: #f9fafb;
-    line-height: 1.6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fafafa;
+    color: #222;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
   a {
-    color: #0a74da;
+    color: #ce9233;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.25s ease;
   }
-  a:hover, a:focus {
-    color: #004a99;
-    outline: none;
+  a:hover,
+  a:focus {
+    color: #a76f19;
+    outline-offset: 2px;
+    outline-color: #a76f19;
+    outline-style: solid;
+    outline-width: 2px;
   }
 
   header {
-    background: #CE9233;
-    color: black
-    padding: 2rem 1rem;
+    background-color: #ce9233;
+    color: #fff;
+    padding: 3rem 1.5rem;
     text-align: center;
-    box-shadow: 0 2px 5px rgb(10 116 218 / 0.3);
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(206, 146, 51, 0.35);
     user-select: none;
   }
+  header h1 {
+    margin: 0 0 0.3rem 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1.35px;
+    line-height: 1.1;
+  }
   header p {
-    margin-top: 0.5rem;
-    font-weight: 400;
-    font-size: 1.15rem;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: 0.15px;
   }
+
   main {
-    max-width: 1000px;
-    margin: 2rem auto 4rem;
-    padding: 0 1rem;
+    max-width: 1100px;
+    margin: 3rem auto 5rem auto;
+    padding: 0 1.25rem;
   }
+
+  /* Section Titles */
   h2.section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    border-bottom: 3px solid #CE9233;
-    padding-bottom: 0.25rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    border-bottom: 4px solid #ce9233;
+    padding-bottom: 0.35rem;
+    color: #333;
+    letter-spacing: 0.7px;
+  }
+
+  /* Intro Section */
+  section.intro p {
+    font-size: 1.125rem;
+    color: #444;
+    max-width: 760px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.65;
   }
 
   /* Job Listings */
   section.jobs {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   article.job-posting {
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
-    padding: 1.5rem 2rem 2rem;
-    margin-bottom: 1.5rem;
-    transition: box-shadow 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    padding: 2rem 2.5rem 2.75rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default;
   }
-  article.job-posting:hover {
-    box-shadow: 0 6px 15px rgb(10 116 218 / 0.3);
+  article.job-posting:hover,
+  article.job-posting:focus-within {
+    box-shadow: 0 10px 30px rgba(206,146,51,0.25);
+    transform: translateY(-5px);
   }
   article.job-posting h3 {
     margin-top: 0;
-    color:#CE9233;
-    font-weight: 600;
+    color: #ce9233;
+    font-weight: 700;
+    font-size: 1.75rem;
+    letter-spacing: 0.5px;
   }
   .job-meta {
     font-style: italic;
     color: #666;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    margin: 0.6rem 0 1.4rem 0;
+    letter-spacing: 0.05em;
   }
   .job-section {
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
   }
   .job-section strong {
-    color: black
+    color: #222;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
   }
   ul {
-    padding-left: 1.2rem;
-    margin: 0.25rem 0 0.75rem;
+    margin: 0.25rem 0 0.8rem 1.5rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  ul li {
+    margin-bottom: 0.4rem;
   }
 
-  /* Why Work With Us & Benefits */
+  /* Culture & Benefits */
   section.culture, section.benefits {
-    background: #e8f1ff;
-    padding: 1.75rem 2rem;
-    border-radius: 8px;
-    margin-bottom: 3rem;
+    background-color: #f3f6fb;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 4rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
   }
-  section.culture h2, section.benefits h2 {
-    color: black
+  section.culture h2,
+  section.benefits h2 {
+    color: #222;
   }
-  section.culture ul, section.benefits ul {
+  section.culture ul,
+  section.benefits ul {
     list-style-type: disc;
-    margin-left: 1.5rem;
+    list-style-position: inside;
+    margin-left: 0;
+    color: #444;
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  section.culture ul li,
+  section.benefits ul li {
+    margin-bottom: 1rem;
+  }
+  section.culture ul li strong,
+  section.benefits ul li strong {
+    font-weight: 700;
   }
 
   /* Application Form */
   section.application {
     background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 7px rgb(0 0 0 / 0.1);
+    padding: 3rem 3rem 3rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
+    max-width: 650px;
+    margin: 0 auto 5rem auto;
   }
   section.application h2 {
-    margin-top: 0;
-    color: black
     font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+    letter-spacing: 0.05em;
   }
+  section.application p {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 2rem;
+  }
+
   form {
-    max-width: 600px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
   }
   label {
-    display: block;
     font-weight: 600;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     color: #222;
+    font-size: 1rem;
   }
   input[type="text"],
   input[type="email"],
@@ -137,14 +205,16 @@
   select,
   textarea,
   input[type="file"] {
-    width: 100%;
-    padding: 0.5rem 0.7rem;
-    margin-bottom: 1.25rem;
-    border: 1.8px solid #ccc;
-    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
+    padding: 0.65rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
+    color: #1f2937;
+    background-color: #fff;
   }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -152,49 +222,78 @@
   select:focus,
   textarea:focus,
   input[type="file"]:focus {
-    border-color: #0a74da;
+    border-color: #ce9233;
+    box-shadow: 0 0 5px rgba(206, 146, 51, 0.6);
     outline: none;
   }
   textarea {
-    min-height: 100px;
+    min-height: 140px;
     resize: vertical;
   }
+
   button.submit-btn {
-    background-color:#CE9233;
+    background-color: #ce9233;
     color: #fff;
-    border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1.15rem;
     font-weight: 700;
-    border-radius: 6px;
+    font-size: 1.25rem;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    box-shadow: 0 5px 15px rgba(206, 146, 51, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
   }
-  button.submit-btn:hover, button.submit-btn:focus {
-    background-color:#ffc107;
+  button.submit-btn:hover,
+  button.submit-btn:focus {
+    background-color: #a76f19;
+    box-shadow: 0 8px 30px rgba(167, 111, 25, 0.6);
     outline: none;
   }
 
   /* Responsive */
-  @media (max-width: 680px) {
-    header h1 {
-      font-size: 2rem;
-    }
+  @media (max-width: 768px) {
     main {
-      margin: 1rem auto 3rem;
-      padding: 0 1rem;
+      margin: 2rem auto 3.5rem auto;
+      padding: 0 1.25rem;
+    }
+    section.application {
+      padding: 2rem 1.5rem 2rem 1.5rem;
+      max-width: 100%;
     }
     article.job-posting {
-      padding: 1rem 1.2rem 1.5rem;
+      padding: 1.5rem 1.5rem 2rem 1.5rem;
+    }
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 0.8px;
+    }
+    header p {
+      font-size: 1rem;
+    }
+    h2.section-title {
+      font-size: 1.75rem;
+    }
+    article.job-posting h3 {
+      font-size: 1.4rem;
+    }
+    button.submit-btn {
+      font-size: 1.15rem;
+      padding: 0.75rem 1.8rem;
     }
   }
 
   /* Success message */
   #form-message {
     font-weight: 700;
-    color: green;
-    margin-top: 0.5rem;
+    color: #28a745;
+    margin-top: 0.75rem;
     text-align: center;
+    font-size: 1.1rem;
+    min-height: 1.4em;
   }
 </style>
 </head>
@@ -216,7 +315,7 @@
   <section class="jobs" aria-label="Current Job Openings">
     <h2 class="section-title">Current Openings</h2>
 
-    <article class="job-posting" id="digital-marketing-specialist">
+    <article class="job-posting" id="digital-marketing-specialist" tabindex="0">
       <h3>Digital Marketing Specialist</h3>
       <div class="job-meta">Location: Remote | Job Type: Full-Time</div>
       <div class="job-section">
@@ -237,7 +336,7 @@
       </div>
     </article>
 
-    <article class="job-posting" id="web-developer">
+    <article class="job-posting" id="web-developer" tabindex="0">
       <h3>Web Developer</h3>
       <div class="job-meta">Location: On-site/Remote | Job Type: Full-Time</div>
       <div class="job-section">
@@ -258,7 +357,7 @@
       </div>
     </article>
 
-    <article class="job-posting" id="seo-expert">
+    <article class="job-posting" id="seo-expert" tabindex="0">
       <h3>SEO Expert</h3>
       <div class="job-meta">Location: Remote | Job Type: Full-Time</div>
       <div class="job-section">
@@ -340,11 +439,13 @@
     const form = event.target;
     const formMessage = document.getElementById('form-message');
     formMessage.textContent = '';
+    formMessage.style.color = '';
+
     // Basic validation for file input extension
     const resumeInput = form.resume;
     if (resumeInput.files.length === 0) {
       formMessage.textContent = 'Please upload your resume.';
-      formMessage.style.color = 'red';
+      formMessage.style.color = '#dc3545';
       resumeInput.focus();
       return;
     }
@@ -353,14 +454,15 @@
     const fileExt = fileName.split('.').pop();
     if (!allowedExtensions.includes(fileExt)) {
       formMessage.textContent = 'Only PDF, DOC, or DOCX files are allowed for resume.';
-      formMessage.style.color = 'red';
+      formMessage.style.color = '#dc3545';
       resumeInput.focus();
       return;
     }
+
     // Simulate form submission success
     form.reset();
     formMessage.textContent = 'Thank you for your application! We will review it and get back to you soon.';
-    formMessage.style.color = 'green';
+    formMessage.style.color = '#28a745';
   });
 </script>
 </body>
