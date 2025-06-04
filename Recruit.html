@@ -1,479 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Join Our Team | Careers at [Company Name]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <style>
-        /* Reset & base */
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f9fbfc;
-            color: black;
-            line-height: 1.6;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: yellow;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Join our team! Explore job opportunities and learn about our company culture." />
+  <title>Careers at Your Company Name</title>
+  <style>
+    /* CSS Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background-color: #797672;
-            color: #ecf0f1;
-            padding: 2rem 1rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-        }
-        header h1 {
-            margin: 0 0 0.3rem 0;
-            font-weight: 600;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 0;
-            font-weight: 300;
-            font-size: 1.2rem;
-            letter-spacing: 0.05rem;
-        }
+    html {
+      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f6f8fa;
+      color: #222;
+    }
 
-        main.container {
-            max-width: 1100px;
-            width: 95%;
-            margin: 2rem auto 5rem auto;
-        }
-        section {
-            background: white;
-            margin-bottom: 3rem;
-            padding: 2rem 3rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgb(0 0 0 / 0.05);
-        }
-        section h2 {
-            font-weight: 600;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid black;
-            display: inline-block;
-            padding-bottom: 0.25rem;
-            color: #16a085;
-        }
-        section p, section ul {
-            margin-top: 0;
-            font-weight: 400;
-            font-size: 1rem;
-            color: #34495e;
-        }
+    body {
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem 4rem;
+    }
 
-        /* Company Info */
-        .company-info p {
-            max-width: 720px;
-            margin-bottom: 1rem;
-        }
+    header {
+      background: #fff;
+      width: 100%;
+      max-width: 1200px;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        /* Job Listings */
-        .job-listings .job {
-            padding: 1.5rem;
-            border-bottom: 1px solid #ddd;
-            position: relative;
-            transition: box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-        .job-listings .job:last-child {
-            border-bottom: none;
-        }
-        .job-listings .job:hover {
-            box-shadow: 0 10px 25px rgb(0 0 0 / 0.12);
-            background-color: #d6d1ca;
-        }
-        .job-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-            padding-right: 130px;
-        }
-        .job-location, .job-requirements {
-            font-weight: 400;
-            margin: 0.3rem 0 0.8rem 0;
-        }
-        .apply-btn {
-            position: absolute;
-            top: 50%;
-            right: 30px;
-            transform: translateY(-50%);
-            background-color: #CE9233;
-            color: white;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 0.7rem 1.3rem;
-            border-radius: 35px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .apply-btn:hover,
-        .apply-btn:focus {
-            background-color: #ffc107;
-            outline: none;
-        }
+    header h1 {
+      font-size: 2.75rem;
+      color:#1e3c72 ;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        /* Testimonials */
-        .testimonials {
-            max-width: 720px;
-        }
-        .testimonial {
-            margin-bottom: 1.8rem;
-            border-left: 5px solid black;
-            background-color: #f3fcfb;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            font-style: italic;
-            color: #2c3e50;
-        }
-        .testimonial cite {
-            display: block;
-            margin-top: 0.5rem;
-            text-align: right;
-            font-weight: 600;
-            color: black;
-        }
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-weight: 600;
+    }
 
-        /* Recruitment Process Steps */
-        .steps {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 900px;
-            gap: 20px;
-        }
-        .step {
-            background: #ecf0f1;
-            flex: 1 1 220px;
-            padding: 1.5rem 1.8rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 6px 18px rgb(0 0 0 / 0.07);
-            cursor: default;
-            transition: background-color 0.3s ease;
-        }
-        .step:hover {
-            background-color:  #d6d1ca;
-        }
-        .step h3 {
-            margin: 0 0 0.7rem 0;
-            color: black;
-        }
-        .step p {
-            font-weight: 300;
-            font-size: 0.95rem;
-            color: #34495e;
-        }
-        .step-icon {
-            font-size: 2.5rem;
-            color: #CE9233;
-            margin-bottom: 1rem;
-        }
+    nav a {
+      text-decoration: none;
+      color: #2a5298;
+      font-size: 1.125rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-        /* Contact Info */
-        .contact-info h2 {
-            color: black;
-        }
-        .contact-info p {
-            margin: 0.5rem 0;
-            font-weight: 400;
-            font-size: 1rem;
-        }
-        .contact-info a {
-            color: #2980b9;
-            font-weight: 600;
-        }
-        .contact-info a:hover {
-            color: #CE9233;
-        }
+    nav a:hover,
+    nav a:focus {
+      background-color: #1e3c72;
+      color: white;
+      outline: none;
+    }
 
-        /* Modal Styles */
-        .modal-overlay {
-            background-color: rgba(0,0,0,0.6);
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-        .modal-overlay.show {
-            display: flex;
-        }
-        .modal {
-            background: white;
-            width: 90%;
-            max-width: 480px;
-            border-radius: 12px;
-            padding: 2rem 2.5rem;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-            position: relative;
-        }
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.3rem;
-        }
-        .modal-header h2 {
-            margin: 0;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #34495e;
-        }
-        .close-btn {
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #34495e;
-            font-weight: 600;
-            line-height: 1;
-        }
-        form label {
-            display: block;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-            color: #34495e;
-        }
-        form input, form textarea, form select {
-            width: 100%;
-            padding: 0.6rem 0.8rem;
-            margin-bottom: 1rem;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            transition: border-color 0.3s ease;
-        }
-        form input:focus, form textarea:focus, form select:focus {
-            outline: none;
-            border-color: black;
-        }
-        form textarea {
-            resize: vertical;
-            min-height: 90px;
-        }
-        form button.submit-btn {
-            background-color: #CE9233;
-            border: none;
-            color: white;
-            font-weight: 700;
-            font-size: 1.1rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        form button.submit-btn:hover, form button.submit-btn:focus {
-            background-color: #CE9233;
-            outline: none;
-        }
-        .form-error {
-            margin-bottom: 1rem;
-            color: #e74c3c;
-            font-weight: 600;
-        }
-        /* Responsive */
-        @media (max-width: 720px) {
-            .steps {
-                flex-direction: column;
-            }
-            .step {
-                text-align: left;
-            }
-            .apply-btn {
-                position: static;
-                transform: none;
-                width: 100%;
-                margin-top: 10px;
-                text-align: center;
-            }
-            .job-title {
-                padding-right: 0;
-            }
-        }
-    </style>
+    main {
+      width: 100%;
+      max-width: 1200px;
+      background-color: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+      padding: 2.5rem 3rem;
+      color: #222;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #1e3c72;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #2a5298;
+      padding-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+    }
+
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #1a2e4b;
+      font-size: 1.375rem;
+      margin-bottom: 0.75rem;
+      margin-top: 1.75rem;
+    }
+    
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    ul {
+      margin-left: 1rem;
+      list-style-type: disc;
+      max-width: 800px;
+    }
+
+    /* About Us Section */
+    #about ul {
+      list-style-type: square;
+      margin-left: 1.5rem;
+      color: #555;
+    }
+
+    /* Job Listings */
+    #job-listings .job-filter {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 600;
+      color: #2a5298;
+    }
+
+    #department {
+      padding: 0.375rem 0.75rem;
+      border-radius: 6px;
+      border: 2px solid #2a5298;
+      font-size: 1rem;
+      background-color: #fefefe;
+      transition: border-color 0.3s ease;
+    }
+    #department:focus {
+      outline: none;
+      border-color: #1e3c72;
+      box-shadow: 0 0 6px #1e3c72aa;
+    }
+
+    #job-listings ul {
+      list-style-type: none;
+      max-width: 900px;
+    }
+
+    #job-listings li {
+      background: #e9eefb;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 12px rgba(46, 55, 72, 0.08);
+      transition: box-shadow 0.3s ease;
+    }
+
+    #job-listings li:hover,
+    #job-listings li:focus-within {
+      box-shadow: 0 8px 25px rgba(46, 55, 72, 0.15);
+    }
+
+    #job-listings h3 {
+      margin-top: 0;
+      color: #1e3c72;
+      font-size: 1.5rem;
+    }
+
+    #job-listings p {
+      margin-bottom: 0.75rem;
+    }
+
+    #job-listings a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.5rem 1.5rem;
+      border-radius: 30px;
+      background: #1e3c72;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 5px 10px #1e3c7244;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #job-listings a:hover,
+    #job-listings a:focus {
+      background: #2a5298;
+      box-shadow: 0 6px 14px #2a529877;
+      outline: none;
+    }
+
+    /* Testimonials */
+    #testimonials blockquote {
+      font-style: italic;
+      border-left: 6px solid #1e3c72;
+      background: #f0f4ff;
+      margin-left: 0;
+      margin-bottom: 1.5rem;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      color: #2a3a5b;
+      max-width: 900px;
+      box-shadow: 0 3px 8px #1e3c7280;
+      font-size: 1.125rem;
+      position: relative;
+    }
+
+    #testimonials blockquote:before {
+      content: '“';
+      font-size: 3rem;
+      position: absolute;
+      left: 15px;
+      top: 0px;
+      color: #1e3c72aa;
+    }
+
+    /* FAQ */
+    #faq h3 {
+      margin-top: 1rem;
+      color: #2a3c72;
+    }
+
+    #faq p {
+      max-width: 900px;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      max-width: 1200px;
+      width: 100%;
+      text-align: center;
+      padding-top: 1rem;
+      color: #e0e0e0;
+      font-size: 0.95rem;
+      border-top: 1px solid #2a5298aa;
+      user-select: none;
+    }
+
+    footer a {
+      color: #aaddff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #ffffffaa;
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      main, header {
+        padding: 1.5rem 1.5rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      nav a {
+        font-size: 1.25rem;
+      }
+      #job-listings li {
+        padding: 1.25rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 1.125rem;
+      }
+      #job-listings a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Careers at Your Company Name</h1>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#job-listings">Job Openings</a></li>
+        <li><a href="#testimonials">Employee Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-    <h1>Careers at [Websphere Solution]</h1>
-    <p>Join a team committed to innovation, growth & success.</p>
-</header>
-
-<main class="container" role="main">
-
-    <!-- Company Information -->
-    <section class="company-info" aria-labelledby="companyInfoTitle">
-        <h2 id="companyInfoTitle" style="color: black;">About Us</h2>
-        <p>At <strong>[Websphere Solutions]</strong>, we believe our people are our greatest asset. We cultivate a culture of collaboration, innovation, and continuous learning, empowering our team members to reach their fullest potential.</p>
-        <p>Our mission is to drive excellence while fostering diversity, inclusion, and a positive workplace environment. Explore opportunities with us and build a meaningful career.</p>
-        <img src="https://via.placeholder.com/600x300" alt="Company Image" style="width: 100%; border-radius: 12px; margin-top: 1rem;">
+  <main>
+    <section id="about" tabindex="-1">
+      <h2>Company Overview</h2>
+      <p>websphere-solution  is dedicated to transforming the world through innovation and commitment to excellence. Our mission is to empower individuals and businesses by providing outstanding products and services.</p>
+      <p>We live by our core values: integrity, collaboration, and customer-centricity. Our culture fosters creativity, continuous learning, and respect for diversity.</p>
+      <h3>Why Work With Us?</h3>
+      <ul>
+        <li>Competitive salary and comprehensive benefits including health, dental, vision, and retirement plans</li>
+        <li>Opportunities for professional growth and career advancement</li>
+        <li>A supportive work environment promoting work-life balance and wellness programs</li>
+      </ul>
     </section>
 
-    <!-- Recruitment Process -->
-    <section aria-labelledby="processTitle">
-        <h2 id="processTitle" style="color: black;">Our Recruitment Process</h2>
-        <div class="steps" role="list">
-            <div class="step" role="listitem" tabindex="0">
-                <div class="step-icon"><i class="fas fa-search"></i></div>
-                <h3>Discover & Apply</h3>
-                <p>Browse our current openings and submit your application through our easy online system.</p>
-            </div>
-            <div class="step" role="listitem" tabindex="0">
-                <div class="step-icon"><i class="fas fa-comments"></i></div>
-                <h3>Interview</h3>
-                <p>Engage with our recruiters and managers to discuss your experience and goals.</p>
-            </div>
-            <div class="step" role="listitem" tabindex="0">
-                <div class="step-icon"><i class="fas fa-user-check"></i></div>
-                <h3>Offer & Onboarding</h3>
-                <p>Receive your offer and begin your journey with a comprehensive onboarding experience.</p>
-            </div>
-        </div>
+    <section id="job-listings" tabindex="-1">
+      <h2>Job Openings</h2>
+      <div class="job-filter">
+        <label for="department">Filter by Department:</label>
+        <select id="department" aria-controls="job-listings-list" aria-label="Filter jobs by department" onchange="filterJobs()">
+          <option value="all">All Departments</option>
+          <option value="engineering"><a href="Course.html">Engineering</a>
+           
+          </option>
+          <option value="marketing">Marketing</option>
+          <option value="sales">Sales</option>
+        </select>
+      </div>
+      <ul id="job-listings-list">
+        <li class="job-item" data-department="engineering" tabindex="0">
+          <h3>Software Engineer</h3>
+          <p><strong>Department:</strong> Engineering</p>
+          <p><strong>Responsibilities:</strong> Design, develop, and maintain software applications. Collaborate with cross-functional teams to define solutions.</p>
+          <p><strong>Qualifications:</strong> Bachelor’s degree in Computer Science or related field, experience with JavaScript, Python, or Java preferred.</p>
+          <a href="apply-section.html" aria-label="Apply for Software Engineer position">Apply Now</a>
+        </li>
+        <li class="job-item" data-department="marketing" tabindex="0">
+          <h3>Marketing Specialist</h3>
+          <p><strong>Department:</strong> Marketing</p>
+          <p><strong>Responsibilities:</strong> Plan and execute marketing campaigns, analyze market trends, and develop content to attract and engage customers.</p>
+          <p><strong>Qualifications:</strong> Degree in Marketing or related, strong written and verbal communication skills, experience with digital marketing tools.</p>
+          <a href="apply-section.html" aria-label="Apply for Marketing Specialist position">Apply Now</a>
+        </li>
+        <li class="job-item" data-department="sales" tabindex="0">
+          <h3>Sales Associate</h3>
+          <p><strong>Department:</strong> Sales</p>
+          <p><strong>Responsibilities:</strong> Manage client accounts, meet sales targets, and build strong customer relationships.</p>
+          <p><strong>Qualifications:</strong> Proven sales experience, excellent interpersonal skills, and goal-oriented mindset.</p>
+          <a href="apply-section.html" aria-label="Apply for Sales Associate position">Apply Now</a>
+        </li>
+      </ul>
     </section>
 
-    <!-- Job Listings -->
-    <section class="job-listings" aria-labelledby="jobListingsTitle">
-        <h2 id="jobListingsTitle" style="color: black;">Current Openings</h2>
-        
-        <article class="job" tabindex="0" aria-labelledby="job1Title">
-            <h3 id="job1Title" class="job-title">Software Engineer</h3>
-            <p class="job-location"><strong>Location:</strong> Remote</p>
-            <p class="job-requirements"><strong>Requirements:</strong> 3+ years experience, proficiency in JavaScript and Python, strong problem-solving skills.</p>
-            <button class="apply-btn" aria-label="Apply for Software Engineer" data-job="Software Engineer">Apply Now</button>
-        </article>
-
-        <article class="job" tabindex="0" aria-labelledby="job2Title">
-            <h3 id="job2Title" class="job-title">Digital Marketing Specialist</h3>
-            <p class="job-location"><strong>Location:</strong> New York, NY</p>
-            <p class="job-requirements"><strong>Requirements:</strong> SEO, PPC expertise, social media campaign management experience.</p>
-            <button class="apply-btn" aria-label="Apply for Digital Marketing Specialist" data-job="Digital Marketing Specialist">Apply Now</button>
-        </article>
-
-        <article class="job" tabindex="0" aria-labelledby="job3Title">
-            <h3 id="job3Title" class="job-title">Explore Our Courses</h3>
-            <p class="job-location"><strong>AT</strong><strong>[Websphere Solutions]</strong></p>
-            <p class="job-requirements">We empower learners with industry-relevant IT skills through expertly designed courses. 
-                Whether you're a beginner exploring the tech world or a professional looking to upskill, we have the right course for you.</p>
-            <a href="Course.html"><button class="apply-btn" aria-label="Courses" data-job="Access Courses">Courses</button></a>
-        </article>
+    <section id="testimonials" tabindex="-1">
+      <h2>Employee Testimonials</h2>
+      <blockquote>
+        <p>“Working at Your Company Name has been a transformative experience. The culture is caring, dynamic, and encourages innovation.”<br/><strong></strong></p>
+      </blockquote>
+      <blockquote>
+        <p>“I appreciate the focus on work-life balance and the tremendous support in professional growth.”<br/><strong>-</strong></p>
+      </blockquote>
     </section>
 
-    <!-- Why choose courses -->
-    <section class="company-info" aria-labelledby="companyInfoTitle">
-        <h2 id="companyInfoTitle" style="color: black;">Why Choose Our Courses?</h2>
-        <p>Expert Instructors: Learn from certified professionals with real-world experience.</p>
-        <p>Hands-on Learning: Practical projects and assignments to build your portfolio.</p>
-        <p>Flexible Learning: Online, self-paced, and live class options.</p>
-        <p>Career Support: Resume building, interview prep, and job placement assistance.</p>
+    <section id="faq" tabindex="-1">
+      <h2>Frequently Asked Questions</h2>
+      <h3>What is the application process like?</h3>
+      <p>Our application process is simple: choose a job, submit your resume and cover letter online, and our HR team will review your application. Selected candidates will be contacted for interviews.</p>
+      <h3>What benefits do you offer?</h3>
+      <p>We provide a comprehensive benefits package including health insurance, retirement plans, generous paid time off, wellness programs, and continuous learning opportunities.</p>
     </section>
 
-    <!-- Testimonials -->
-    <h1 id="testimonialsTitle">Employee Testimonials</h1>
-    <blockquote class="testimonial">
-        "Working here has transformed my career. The supportive culture and growth opportunities are amazing!" 
-        <cite>- Alex Johnson, Senior Developer</cite>
-    </blockquote>
-    <blockquote class="testimonial">
-        "I love the emphasis on work-life balance and continuous learning at [Company Name]. It’s a place where you really feel valued."
-        <cite>- Maria Lopez, Marketing Manager</cite>
-    </blockquote>
-
-    <!-- Contact Information -->
-    <section class="contact-info" style="color: black;" aria-labelledby="contactTitle">
-        <h2 id="contactTitle">Have Questions?</h2>
-        <p>Contact our HR team for more information about job openings or the recruitment process.</p>
-        <p>Email: <a href="mailto:hr@company.com">info@webspheresolution.in</a></p>
-        <p>Phone: <a href="contact">+91-7011032036</a></p>
+    <section id="apply-section" tabindex="-1">
+      <h2>Easy Application Process</h2>
+      <p>Please email your resume and cover letter to <a href="mailto:careers@yourcompany.com">careers@yourcompany.com</a> with the job title in the subject line, or use our online application form linked in each job listing.</p>
     </section>
+  </main>
 
-</main>
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Your Company Name. All rights reserved.</p>
+    <p>
+      Follow us on 
+      <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer">LinkedIn</a>, 
+      <a href="https://www.glassdoor.com/Overview/Working-at-Your-Company" target="_blank" rel="noopener noreferrer">Glassdoor</a>, and 
+      <a href="https://www.indeed.com/cmp/Your-Company" target="_blank" rel="noopener noreferrer">Indeed</a>.
+    </p>
+  </footer>
 
-<!-- Modal for Application Form -->
-<div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="applicationModal">
-    <div class="modal">
-        <div class="modal-header">
-            <h2 id="modalTitle">Apply for <span id="modalJobName"></span></h2>
-            <button class="close-btn" aria-label="Close application form">&times;</button>
-        </div>
-        
-        <form id="applicationForm" novalidate>
-            <div id="formError" class="form-error" aria-live="assertive" style="display:none;"></div>
+  <script>
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" required />
-
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" placeholder="john@example.com" required />
-
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 555 132 4567" required pattern="^\+?[0-9\s\-]{7,15}$" />
-
-            <label for="coverLetter">Cover Letter</label>
-            <textarea id="coverLetter" name="coverLetter" placeholder="Briefly explain why you're the perfect fit for this role..."></textarea>
-
-            <button type="submit" class="submit-btn">Submit Application</button>
-        </form>
-    </div>
-</div>
-
-<script>
-    // Modal handlers
-    const modal = document.getElementById('applicationModal');
-    const modalJobName = document.getElementById('modalJobName');
-    const closeBtn = modal.querySelector('.close-btn');
-    const applyButtons = document.querySelectorAll('.apply-btn');
-    const form = document.getElementById('applicationForm');
-    const formError = document.getElementById('formError');
-
-    applyButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            modalJobName.textContent = btn.getAttribute('data-job');
-            form.reset();
-            formError.style.display = 'none';
-            modal.classList.add('show');
-            document.getElementById('name').focus();
-        });
-    });
-
-    closeBtn.addEventListener('click', () => {
-        modal.classList.remove('show');
-    });
-
-    window.addEventListener('click', e => {
-        if (e.target === modal) {
-            modal.classList.remove('show');
+    // Job filter function
+    function filterJobs() {
+      const department = document.getElementById('department').value;
+      const jobs = document.querySelectorAll('.job-item');
+      jobs.forEach(job => {
+        if (department === 'all' || job.dataset.department === department) {
+          job.style.display = 'block';
+          job.setAttribute('tabindex', '0');
+        } else {
+          job.style.display = 'none';
+          job.setAttribute('tabindex', '-1');
         }
-    });
+      });
+    }
+  </script>
+</body>
+</html>
 
-    // Form validation and submission simulation
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        formError.style.display = 'none';
-
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const phone = form.phone.value.trim();
-
-        // Basic validation
-        if (!name) {
-            showError('Please enter your full name.');
-            return;
-        }

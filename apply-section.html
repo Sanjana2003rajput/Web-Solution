@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Job Application Form</title>
+<style>
+    :root {
+        --primary-color: #1e3c72;
+        --secondary-color: #f0f4f8;
+        --accent-color: #50e3c2;
+        --text-color: #333;
+        --border-radius: 8px;
+        --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+        margin: 0;
+        background: var(--secondary-color);
+        font-family: var(--font-family);
+        color: var(--text-color);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding: 20px;
+    }
+    .container {
+        background: white;
+        max-width: 600px;
+        width: 100%;
+        padding: 30px 40px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        border-radius: var(--border-radius);
+        animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea,
+    input[type="file"] {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1.5px solid #ccc;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        resize: vertical;
+        transition: border-color 0.3s;
+        font-family: var(--font-family);
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus,
+    input[type="file"]:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 6px var(--accent-color);
+    }
+    textarea {
+        min-height: 120px;
+    }
+    button {
+        background: var(--primary-color);
+        color: white;
+        font-weight: 700;
+        padding: 14px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 3px 10px rgba(30, 60, 114, 0.5);
+    }
+    button:hover {
+        background: #153158;
+    }
+    .error-message {
+        color: #c53030;
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
+    @media (max-width: 640px) {
+        .container {
+            padding: 25px 20px;
+        }
+    }
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Application Form</h1>
+        <form id="jobApplicationForm" novalidate>
+            <div>
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+                <div class="error-message" id="errorFullName"></div>
+            </div>
+            <div>
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <div class="error-message" id="errorEmail"></div>
+            </div>
+            <div>
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +1-555-123-4567" required />
+                <div class="error-message" id="errorPhone"></div>
+            </div>
+            <div>
+                <label for="position">Position Applying For *</label>
+                <select id="position" name="position" required>
+                    <option value="" disabled selected>Select a position</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Product Manager">Product Manager</option>
+                    <option value="Designer">Designer</option>
+                    <option value="Marketing Specialist">Marketing Specialist</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="error-message" id="errorPosition"></div>
+            </div>
+            <div>
+                <label for="resume">Upload Resume (PDF or DOC) *</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+                <div class="error-message" id="errorResume"></div>
+            </div>
+            <div>
+                <label for="coverLetter">Cover Letter</label>
+                <textarea id="coverLetter" name="coverLetter" placeholder="Tell us why you'd be a great fit..."></textarea>
+            </div>
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+<script>
+    document.getElementById('jobApplicationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Clear previous errors
+        const errors = ['FullName', 'Email', 'Phone', 'Position', 'Resume'];
+        errors.forEach(id => document.getElementById('error' + id).textContent = '');
+        
+        let valid = true;
+        
+        // Validate Full Name
+        const fullName = this.fullName.value.trim();
+        if(fullName.length < 2) {
+            document.getElementById('errorFullName').textContent = 'Please enter a valid full name.';
+            valid = false;
+        }
+
+        // Validate Email
+        const email = this.email.value.trim();
+        const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        if(!emailRegex.test(email)) {
+            document.getElementById('errorEmail').textContent = 'Please enter a valid email address.';
+            valid = false;
+        }
+
+        // Validate Phone
+        const phone = this.phone.value.trim();
+        const phoneRegex = /^[\d\-\+\s\(\)]+$/;
+        if(phone.length < 7 || !phoneRegex.test(phone)) {
+            document.getElementById('errorPhone').textContent = 'Please enter a valid phone number.';
+            valid = false;
+        }
+
+        // Validate Position
+        if(!this.position.value) {
+            document.getElementById('errorPosition').textContent = 'Please select a position.';
+            valid = false;
+        }
+
+        // Validate Resume upload
+        const resumeInput = this.resume;
+        const file = resumeInput.files[0];
+        if(!file) {
+            document.getElementById('errorResume').textContent = 'Please upload your resume.';
+            valid = false;
+        } else {
+            const allowedTypes = ['application/pdf',
+                'application/msword',
+                'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+            if(!allowedTypes.includes(file.type)) {
+                document.getElementById('errorResume').textContent = 'Only PDF or Word documents are allowed.';
+                valid = false;
+            }
+        }
+
+        if(valid) {
+            alert('Thank you for your application! We will get back to you soon.');
+            this.reset();
+        }
+    });
+</script>
+</body>
+</html>
+
